@@ -10,7 +10,7 @@
 <script type="text/template" id="food-image-template">
 	{{#foods}}
 		<label class="thumbnail-wrap">
-			<input type="checkbox"/>
+			<input name="foods" type="checkbox" value="{{id}}"/>
 			<div class="thumbnail">
 				<img src="{{thumbnail}}" alt="...">
 				<div class="caption">
@@ -22,13 +22,13 @@
 </script>
 <body>
 	<div class="jumbotron">
-		<form>
+		<form id="food-form" action="javascript:;">
 			<div class="container">
 				<h1>which of these breakfasts have you eaten in the <b>past 7 days?</b></h1>
 				<div id="gallery" class="food-gallery"></div>
 			</div>
 			<div class="container">
-				<button class="btn btn-primary">Next</button>
+				<button class="btn btn-primary" id="next-button" >Next</button>
 			</div>
 		</form>
 	</div>
