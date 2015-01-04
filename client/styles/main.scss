@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+// Mixins
+@import "../bower_components/materialize/sass/components/prefixer";
+@import "../bower_components/materialize/sass/components/mixins";
+
+// Variables;
+@import "../bower_components/materialize/sass/components/variables";
+
+
+// Generic
+input[type=text], input[type=password], input[type=email], input[type=date], textarea {
+	// margin: 0;
+	padding: 0 10px;
+	box-sizing: border-box;
+	padding-left: 25px;
+	&:focus {
+		border-bottom: 1px solid #9e9e9e;
+		-webkit-box-shadow: none;
+		-moz-box-shadow:none;
+		box-shadow: none;
+	}
+}
+[type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
+	padding-left: 25px;
+}
+
+//Elements 
+.logo {
+	height: 35vh;
+	img {
+		height: 80px;
+	}
+}
+
+.btn-large {
+	height: 45px;
+	line-height: 45px;
+}
+
+.account-wrapper {
+	padding: 25px;
+}
+
+.main-button {
+	width: 100%;
+	background-color: #ff7f00;
+}
+
+// Home Page
+.home-page {
+	.account-wrapper {
+		.small-details {
+			margin: 0 0 15px 0;
+			.forgot {
+				float: right;
+				font-size: 1rem;
+				line-height: 25px;
+			}
+		}
+		.external-singup {
+			.btn-large {
+				width: 48%;
+			}
+			.facebook {
+				float: right;
+			}
+		}
+	}
+	.create-an-account {
+		text-align: center;
+	}
+}
+
+
+//Sign uppage
+
+.sign-up-page {
+	.logo {
+		height: 15vh;
+	}
+	
+}
+ 

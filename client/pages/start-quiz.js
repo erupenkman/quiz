@@ -10,11 +10,12 @@ $(function(){
 		{
 		    answers.push($(this).val());
 		});
+
+
 		$.ajax({
 			type: 'POST',
 			url: 'http://localhost:8080/answers',
-			data: JSON.stringify({foods:answers}),
-   			contentType : 'application/json',
+			data: answers,
 			success: function(data){
 				console.log(data);
 			},

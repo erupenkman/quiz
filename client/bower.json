@@ -1,0 +1,19 @@
+{
+  "name": "health-quiz",
+  "version": "0.0.0",
+  "authors": [
+    "a <a@b.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.3",
+    "mustache": "0.8.2"
+  }
+}
