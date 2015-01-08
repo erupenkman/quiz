@@ -39,7 +39,7 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 	line-height: 45px;
 }
 
-.account-wrapper {
+.app-container {
 	padding: 25px;
 	margin: 0 auto;
 	max-width: 500px;
@@ -53,7 +53,7 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 
 // Home Page
 .home-page {
-	.account-wrapper {
+	.app-container {
 		max-width: 500px;
 
 		.small-details {
@@ -121,8 +121,27 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 		height: 200px;
 		margin-bottom: 50px;
 
+		.user-image {
+			float: left;
+			width: 110px;
+			background-image: url("../img/default.jpg");
+			height: 110px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			border-radius: 100%;
+			border: 5px solid #ff7f00;
+		}
+
+
 
 	}
+	.view {
+		background-color: #FF4590;
+	}
+	.diary {
+		background-color: #FF4268;
+	}
+
 }
 
 
