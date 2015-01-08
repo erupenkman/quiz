@@ -7,7 +7,6 @@
 // Variables;
 @import "../bower_components/materialize/sass/components/variables";
 
-
 // Generic
 input[type=text], input[type=password], input[type=email], input[type=date], textarea {
 	// margin: 0;
@@ -25,6 +24,8 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 	padding-left: 25px;
 }
 
+//--------------------------------------------------------------------------------------------------------------------------------------//
+
 //Elements 
 .logo {
 	height: 35vh;
@@ -40,6 +41,9 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 
 .account-wrapper {
 	padding: 25px;
+	margin: 0 auto;
+	max-width: 500px;
+
 }
 
 .main-button {
@@ -50,6 +54,8 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 // Home Page
 .home-page {
 	.account-wrapper {
+		max-width: 500px;
+
 		.small-details {
 			margin: 0 0 15px 0;
 			.forgot {
@@ -60,9 +66,18 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 		}
 		.external-singup {
 			.btn-large {
-				width: 48%;
+				width: 48%;	
+				img {
+					width: auto;
+					height: 45px;
+				}
+			}
+			.google {
+				background-color: #dc4a38;
+
 			}
 			.facebook {
+				background-color: #3a589e;
 				float: right;
 			}
 		}
@@ -79,6 +94,36 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 	.logo {
 		height: 15vh;
 	}
+
+	
+
 	
 }
+
+//user home page
+
+.user-home-page {
+
+	.main-nav-bar {
+		width: 100%;
+		height: 50px;
+		background-color: #ff7f00;
+	}
+
+	.btn-large {
+		height: 65px;
+		line-height: 65px;
+
+	}
+
+	.user-account-details {
+		background-color: rgb(230, 230, 230);
+		height: 200px;
+		margin-bottom: 50px;
+
+
+	}
+}
+
+
  
