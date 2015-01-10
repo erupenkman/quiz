@@ -4,7 +4,7 @@
 @import "../bower_components/materialize/sass/components/prefixer";
 @import "../bower_components/materialize/sass/components/mixins";
 
-@mixin desktop (){
+@mixin desktop (){{
 	@media (min-width: 992px) { @content; }
 }
 
@@ -160,7 +160,6 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 		line-height: 65px;
 
 	}
-
 	.user-account-details {
 		background-color: rgb(230, 230, 230);
 		height: 200px;
