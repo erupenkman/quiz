@@ -4,10 +4,18 @@
 @import "../bower_components/materialize/sass/components/prefixer";
 @import "../bower_components/materialize/sass/components/mixins";
 
+@mixin desktop (){
+	@media (min-width: 992px) { @content; }
+}
+
 // Variables;
 @import "../bower_components/materialize/sass/components/variables";
 
 // Generic
+body {
+	height: 100vh;
+}
+
 input[type=text], input[type=password], input[type=email], input[type=date], textarea {
 	// margin: 0;
 	padding: 0 10px;
@@ -27,12 +35,47 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 //--------------------------------------------------------------------------------------------------------------------------------------//
 
 //Elements 
+
+
 .logo {
 	height: 35vh;
 	img {
 		height: 80px;
 	}
 }
+
+.main-nav-bar {
+	width: 100%;
+	height: 50px;
+	background-color: #ff7f00;
+	line-height: inline;
+	padding: 10px;
+	
+
+	img {
+		height: 30px;
+	}
+
+	.home-icon {
+		width: 20%;
+		float: left;
+	}
+
+	.logo-icon {
+		float: left;
+		width: 60%;
+		text-align: center;
+	}
+
+	.setup-icon {
+		float: right;
+		img {
+		 float: right;
+		}
+		width: 20%;
+	}
+}
+
 
 .btn-large {
 	height: 45px;
@@ -49,6 +92,14 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 .main-button {
 	width: 100%;
 	background-color: #ff7f00;
+}
+
+.h2 {
+	text-align: center;
+	color: #ff7f00;
+	font-size: 30px;
+	line-height: 2.212rem;
+	font-weight: 500;
 }
 
 // Home Page
@@ -104,12 +155,6 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 
 .user-home-page {
 
-	.main-nav-bar {
-		width: 100%;
-		height: 50px;
-		background-color: #ff7f00;
-	}
-
 	.btn-large {
 		height: 65px;
 		line-height: 65px;
@@ -120,28 +165,47 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 		background-color: rgb(230, 230, 230);
 		height: 200px;
 		margin-bottom: 50px;
-
+		.app-container {
+			height: 200px;
+		}
 		.user-image {
 			float: left;
-			width: 110px;
 			background-image: url("../img/default.jpg");
-			height: 110px;
 			background-size: cover;
 			background-repeat: no-repeat;
 			border-radius: 100%;
 			border: 5px solid #ff7f00;
+			height: 80px;
+			width: 80px;
+			@include desktop {
+				height: 100px;
+				width: 100px;
+			}
 		}
-
-
-
 	}
 	.view {
-		background-color: #FF4590;
+		background-color: #FD5894;
 	}
 	.diary {
-		background-color: #FF4268;
+		background-color: #FF5476;
 	}
 
+}
+
+
+//quiz intro page 
+
+.quiz-intro-page{
+
+	.p {
+		text-align: center;
+		height: 320px;
+		margin-bottom: 30px;
+		text-overflow: hidden;
+	}
+
+
+	
 }
 
 
