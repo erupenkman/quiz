@@ -20,12 +20,16 @@
     "gulp-plumber": "^0.6.6"
   },
   "dependencies": {
-    "connect-mongo": "^0.5.0",
-    "express": "^4.10.6",
-    "cors": "^2.5.2",
     "body-parser": "^1.10.0",
+    "connect-mongo": "^0.5.0",
+    "cors": "^2.5.2",
+    "everyauth": "^0.4.9",
+    "express": "^4.10.6",
     "express-session": "^1.9.3",
-    "serve-index": "^1.5.3",
-    "gulp-util": "^3.0.2"
+    "gulp-util": "^3.0.2",
+    "mongoose": "^3.8.21",
+    "passport": "^0.2.1",
+    "passport-google": "^0.3.0",
+    "serve-index": "^1.5.3"
   }
 }
