@@ -16,7 +16,9 @@ var User = mongoose.model('User', {
   openId: String
 });
 var saveUser = function(identifier, profile, done) {
-  User.findOne(function(err, existingUser) {
+  User.findOne({
+    openId: identifier
+  }, function(err, existingUser) {
     if (err) {
       console.log(err);
       return done(err, existingUser);
@@ -30,6 +32,7 @@ var saveUser = function(identifier, profile, done) {
         if (err) console.log(err);
         return done(err, newUser);
       });
+
     } else {
       console.log('existing user: ', existingUser);
       return done(err, existingUser)
@@ -105,8 +108,14 @@ app.get('/auth/currentUser', function(req, res, done) {
       name: req.user.name
     });
   } else {
-    res.error();
+    res.status(401).send('not authorized');
   }
+});
+app.get('/auth/logout', function(req, res) {
+  console.log('logout');
+  req.logout();
+  req.session.destroy();
+  res.redirect('/client/pages/home.html');
 });
 var port = process.env.PORT || 8080;
 app.listen(port);
