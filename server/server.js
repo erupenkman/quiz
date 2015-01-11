@@ -7,6 +7,7 @@ mongoose.connect('mongodb://localhost/health-quiz');
 require('./config/configure-express.js')(app, mongoose);
 require('./authentication/setup.js')(app, mongoose);
 require('./authentication/google.js')(app);
+require('./authentication/facebook.js')(app);
 
 // compute whether the diet is healthy
 app.post('/answers', function(req, res, next) {
