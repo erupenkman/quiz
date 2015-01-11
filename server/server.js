@@ -53,8 +53,8 @@ passport.deserializeUser(function(user, done) {
   done(null, user);
 });
 
-app.use('/client', express.static(path.join(__dirname, '/client')));
-app.use('/client', serveIndex(__dirname + "/client"));
+app.use('/client', express.static(path.join(__dirname, '../client')));
+app.use('/client', serveIndex(__dirname + "../client"));
 app.use(session({
   resave: true,
   saveUninitialized: true,

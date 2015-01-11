@@ -8,7 +8,7 @@ var gulp = require('gulp'),
   gutil = require('gulp-util');
 
 var keepRunningIfError = plumber({
-  errorHandler: function(err){
+  errorHandler: function(err) {
     gutil.beep();
     console.log(err);
   }
@@ -17,11 +17,11 @@ gulp.task('sass', function() {
   gulp.src('./client/styles/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(plumber({
-      errorHandler: function(err){
+      errorHandler: function(err) {
         gutil.beep();
         console.log('\n\n\n');
         //in red
-        console.log('\033[31m'+err.message );
+        console.log('\033[31m' + err.message);
         console.log('\n\n\n');
       }
     }))
@@ -32,7 +32,7 @@ gulp.task('sass', function() {
 gulp.task('server', function() {
   nodemon({
     ignore: ['client/**'],
-    script: 'server.js',
+    script: 'server/server.js',
     ext: 'js',
     nodeArgs: ['--debug=5858'],
   });
@@ -47,7 +47,7 @@ gulp.task('watch', function() {
   livereload.listen({
     basePath: '/client'
   });
-  gulp.watch('client/**', ['sass','reload' ])
+  gulp.watch('client/**', ['sass', 'reload'])
 });
 
 gulp.task('default', ['server', 'sass', 'watch']);
