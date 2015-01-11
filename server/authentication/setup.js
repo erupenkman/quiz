@@ -42,33 +42,6 @@ module.exports = function(app, mongoose) {
   passport.deserializeUser(function(user, done) {
     done(null, user);
   });
-
   app.use(passport.initialize());
   app.use(passport.session());
-
-  app.get('/auth/google', passport.authenticate('google'));
-  // Google will redirect the user to this URL after authentication.  Finish
-  // the process by verifying the assertion.  If valid, the user will be
-  // logged in.  Otherwise, authentication has failed.
-  app.get('/auth/google/return',
-    passport.authenticate('google', {
-      successRedirect: '/client/pages/user.html',
-      failureRedirect: '/client/pages/home.html'
-    }));
-  app.get('/auth/currentUser', function(req, res, done) {
-    //req.user is added to the req by passport session
-    if (req.user) {
-      res.send({
-        name: req.user.name
-      });
-    } else {
-      res.status(401).send('not authorized');
-    }
-  });
-  app.get('/auth/logout', function(req, res) {
-    console.log('logout');
-    req.logout();
-    req.session.destroy();
-    res.redirect('/client/pages/home.html');
-  });
-}
+};
