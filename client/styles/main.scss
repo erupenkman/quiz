@@ -4,7 +4,7 @@
 @import "../bower_components/materialize/sass/components/prefixer";
 @import "../bower_components/materialize/sass/components/mixins";
 
-@mixin desktop (){{
+@mixin desktop (){
 	@media (min-width: 992px) { @content; }
 }
 
@@ -36,7 +36,7 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 
 //--------------------------------------------------------------------------------------------------------------------------------------//
 
-//Elements 
+//Elements
 .logo {
 	height: 35vh;
 	img {
@@ -50,7 +50,7 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 	background-color: #ff7f00;
 	line-height: inline;
 	padding: 10px;
-	
+
 
 	img {
 		height: 30px;
@@ -115,7 +115,7 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 				line-height: 25px;
 			}
 		}
-		.external-singup {
+		.external-signup {
 			.btn-large {
 				width: 48%;
 				img {
@@ -145,10 +145,6 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 	.logo {
 		height: 15vh;
 	}
-
-
-
-
 }
 
 //user home page
@@ -160,6 +156,7 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 		line-height: 65px;
 
 	}
+
 	.user-account-details {
 		background-color: rgb(230, 230, 230);
 		height: 200px;
@@ -192,7 +189,7 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 }
 
 
-//quiz intro page 
+//quiz intro page
 
 .quiz-intro-page{
 
@@ -204,7 +201,7 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 	}
 
 
-	
+
 }
 
 
