@@ -1,4 +1,7 @@
+
+
 $(function() {
+  $(".dropdown-button").dropdown();
   var detailsTemplate = $('#user-details-template').html();
   Mustache.parse(detailsTemplate);
   $.ajax({
