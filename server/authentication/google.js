@@ -1,10 +1,9 @@
 passport = require('passport');
-var googleScope = {
-  scope: 'https://www.googleapis.com/auth/userinfo.email ' +
-    'https://www.googleapis.com/auth/userinfo.profile'
-}
+
 module.exports = function(app) {
-  app.get('/auth/google', passport.authenticate('google', googleScope));
+  app.get('/auth/google', passport.authenticate('google', {
+    scope: config.GOOGLE.SCOPE
+  }));
   // Google will redirect the user to this URL after authentication.  Finish
   // the process by verifying the assertion.  If valid, the user will be
   // logged in.  Otherwise, authentication has failed.

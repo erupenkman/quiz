@@ -57,11 +57,10 @@ module.exports = function(app, mongoose) {
     });
   };
   var googleConfig = {
-    clientID: config.GOOGLE_CLIENT_ID,
-    clientSecret: config.GOOGLE_CLIENT_SECRET,
-    callbackURL: config.GOOGLE_CALLBACK_URL
+    clientID: config.GOOGLE.CLIENT_ID,
+    clientSecret: config.GOOGLE.CLIENT_SECRET,
+    callbackURL: config.GOOGLE.CALLBACK_URL
   }
-  console.log(googleConfig);
   passport.use(new GoogleStrategy(googleConfig,
     saveGoogleUser
   ));

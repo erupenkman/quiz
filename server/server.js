@@ -2,7 +2,6 @@ var express = require('express'),
   app = express(),
   mongoose = require('mongoose'),
   config = require('./config/config.js');
-console.log(config.MONGO_URL);
 mongoose.connect(config.MONGO_URL);
 
 require('./config/configure-express.js')(app, mongoose);
