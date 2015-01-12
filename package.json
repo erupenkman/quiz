@@ -1,10 +1,11 @@
 {
   "name": "health-quiz",
   "version": "0.0.0",
-  "description": "",
+  "description": "Quiz about your health and diet",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "postinstall": "bower install"
   },
   "author": "",
   "license": "ISC",
@@ -32,5 +33,8 @@
     "passport-facebook": "^1.0.3",
     "passport-google": "^0.3.0",
     "serve-index": "^1.5.3"
+  },
+  "engines": {
+    "node": "0.10.32"
   }
 }
