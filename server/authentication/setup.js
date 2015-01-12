@@ -1,5 +1,5 @@
 passport = require('passport'),
-  GoogleStrategy = require('passport-google').Strategy,
+  GoogleStrategy = require('passport-google-oauth').OAuth2Strategy,
   FacebookStrategy = require('passport-facebook').Strategy,
   config = require('../config/config.js');
 
@@ -8,9 +8,9 @@ module.exports = function(app, mongoose) {
     name: String,
     openId: String
   });
-  var saveGoogleUser = function(identifier, profile, done) {
+  var saveGoogleUser = function(accessToken, refreshToken, profile, done) {
     User.findOne({
-      openId: identifier
+      openId: accessToken
     }, function(err, existingUser) {
       if (err) {
         console.log(err);
@@ -19,7 +19,7 @@ module.exports = function(app, mongoose) {
         var newUser = new User({
           name: profile.displayName,
           email: profile.emails[0],
-          openId: identifier
+          openId: accessToken
         });
         newUser.save(function(err) {
           if (err) console.log(err);
@@ -56,10 +56,13 @@ module.exports = function(app, mongoose) {
       }
     });
   };
-  passport.use(new GoogleStrategy({
-      returnURL: config.GOOGLE_RETURN_URL,
-      realm: config.GOOGLE_REALM
-    },
+  var googleConfig = {
+    clientID: config.GOOGLE_CLIENT_ID,
+    clientSecret: config.GOOGLE_CLIENT_SECRET,
+    callbackURL: config.GOOGLE_CALLBACK_URL
+  }
+  console.log(googleConfig);
+  passport.use(new GoogleStrategy(googleConfig,
     saveGoogleUser
   ));
   passport.use(new FacebookStrategy({
