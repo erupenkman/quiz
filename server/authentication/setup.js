@@ -57,8 +57,8 @@ module.exports = function(app, mongoose) {
     });
   };
   passport.use(new GoogleStrategy({
-      returnURL: 'http://127.0.0.1:8080/auth/google/return',
-      realm: 'http://127.0.0.1:8080/'
+      returnURL: config.GOOGLE_RETURN_URL,
+      realm: config.GOOGLE_REALM
     },
     saveGoogleUser
   ));
