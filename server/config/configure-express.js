@@ -9,6 +9,9 @@ module.exports = function(app, mongoose) {
 
   app.use('/client', express.static(path.join(__dirname, '../../client')));
   app.use('/client', serveIndex(__dirname + '../../client'));
+  app.get('/', function(req, res) {
+    return res.redirect('/client/pages/home.html');
+  });
   app.use(session({
     resave: true,
 
