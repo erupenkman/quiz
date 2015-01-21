@@ -94,12 +94,46 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 	background-color: #ff7f00;
 }
 
-.h2 {
+
+
+//start-test page
+
+.stepNoinfo {
+	height: 400px;
+	
+	.stepRound {
 	text-align: center;
-	color: #ff7f00;
-	font-size: 30px;
-	line-height: 2.212rem;
-	font-weight: 500;
+	color: white;
+	width: 100px;
+	height: 100px;
+	font-family: sans-serif;
+	background-color: #ff7f00;
+	margin: 0 auto;
+	border-radius: 50%;
+	box-shadow: -1px 2px 2px rgb(146, 146, 146);
+	position: relative;
+	top: -200px;
+		.stepNo {
+			font-size: 60px;
+			font-weight: 500;
+			position: relative;
+			top: 30px;
+
+		}
+	}
+	.pTest{
+		height: 190px;
+		background-color: #E9E9E9;
+		position: relative;
+		top: 60px;
+		border-radius: 2px;
+		box-shadow: -1px 2px 5px #CECECE;
+		padding: 65px 20px 20px 20px;
+		text-align: center;
+		font-family: Roboto;
+		font-size: 16px;
+	}
+	
 }
 
 // Home Page
@@ -195,9 +229,9 @@ input[type=text], input[type=password], input[type=email], input[type=date], tex
 
 	.p {
 		text-align: center;
-		height: 320px;
 		margin-bottom: 30px;
 		text-overflow: hidden;
+		
 	}
 
 
